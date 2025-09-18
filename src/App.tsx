@@ -1,16 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { useState } from 'react'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [count, setCount] = useState(0) //상태  
+  
   return (
-     /* 리턴 묶음 용 */
+    /* 리턴 묶음 용 (한번에 반환)*/
     <> 
-      <h1>카운터</h1>
-      <button>증가</button>
+      <h1>{count}</h1>
+      <button 
+        onClick={() => {
+          setCount((prev) => prev +1 )
+        }}
+      >
+        증가
+      </button>
     </>
   )
 }
